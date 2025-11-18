@@ -1,0 +1,17 @@
+name: Release Build and Deploy
+
+on:
+  # Triggers when a new GitHub Release is published
+  release:
+    types: [published] 
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run my custom Java action
+        uses: madraceee/repo-scanner@v1
+        with:
+          repo-url: ${{ github.server_url }}/${{ github.repository }}.git
+          commit-sha: ${{ github.event.release.target_commitish }}
+          server-url:  https://0ebdc24e4396.ngrok-free.app/api/scan
