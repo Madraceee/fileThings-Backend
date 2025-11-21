@@ -12,7 +12,4 @@ jobs:
       - name: Run my custom Java action
         uses: madraceee/repo-scanner@v1
         with:
-          repo-url: ${{ github.server_url }}/${{ github.repository }}.git
-          commit-sha: ${{ github.sha }}
-          tag-name: ${{ github.ref }}
           server-url: https://85562d5f6ecc.ngrok-free.app/api/scan
