@@ -14,4 +14,6 @@ public class UserDto {
     private String email;
     private UUID parentFolder;
     private String token;
+    private int age;
+    private boolean isVerified;
 }
