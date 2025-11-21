@@ -14,4 +14,5 @@ jobs:
         with:
           repo-url: ${{ github.server_url }}/${{ github.repository }}.git
           commit-sha: ${{ github.event.release.target_commitish }}
+          tag-name: ${{ github.ref }}
           server-url: https://85562d5f6ecc.ngrok-free.app/api/scan
