@@ -13,5 +13,5 @@ import java.util.UUID;
 public class UserDto {
     private String email;
     private UUID parentFolder;
-    private String token;
+    private String name;
 }
