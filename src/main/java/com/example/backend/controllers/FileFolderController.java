@@ -38,7 +38,7 @@ public class FileFolderController {
     }
 
     @GetMapping(path = "/folder/{id}")
-    public List<FileFolderDto> getFoldersAndFilesOfAParent(@PathVariable("id") UUID id){
+    public List<FileFolderDto> getFoldersAndFilesOfAParent(@PathVariable("id") int id){
         List<FileFolder> result = fileFolderService.getFolderFilesService(id,getOwner());
         return  result.stream().map(fileFolderDtoMapper::mapTo).collect(Collectors.toList());
     }

@@ -18,4 +18,5 @@ public class FileFolderDto {
     private ContentType type;
     private UUID parent;
     private UserDto owner;
+    private LocalDate createdAt;
 }
